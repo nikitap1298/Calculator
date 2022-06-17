@@ -64,14 +64,13 @@ class CalculatorViewController: UIViewController {
             if valueLabel.text?.count ?? 1 < 10 {
                 valueLabel.text = (valueLabel.text ?? "0") + number
             }
-        } else if number == "0" {
-            isTyping = false
         } else {
             valueLabel.text = number
             isTyping = true
         }
         
     }
+    
     @IBAction func simpleMathButton(_ sender: UIButton) {
         sign = sender.currentTitle ?? "."
         firstNumber = currentValue
